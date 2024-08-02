@@ -6,116 +6,152 @@ package sistemas;
 public class App {
     
     // Diseñe un algoritmo para saludar al usuario: Hola usuario. El nombre del usuario es ingresado por teclado
-    public static String saludarUsuario(String nombre) {
+    public static String saludarUsuario(String Nombre) {
         try {
-            // Lógica interna
-        } catch (Exception e) {
-            return "Error: " + e.getMessage();
-        }
-        return "";
-    }
+            
+             String saludarUsuario = "Hola "+Nombre;
 
-    // Diseñe un algoritmo que lea por teclado una velocidad en Km/seg y la convierta a metros/seg y a metros/hora
+
+        } catch (Exception e) {
+            return "Error: No se logro dar con el nombre";
+        }
+    return saludarUsuario(Nombre);
+    }
+// Diseñe un algoritmo que lea por teclado una velocidad en Km/seg y la convierta a metros/seg y a metros/hora
     // retorne el valor en formato string (metrosPorSeg + "|" + metrosPorHora)
     public static String convertirVelocidad(double kmPorSeg) {
         try {
-            // Lógica interna
+            double convertirVelocidad = (kmPorSeg * 1000);
+
+            double metrosPorHora = ((convertirVelocidad)* 3600);
         } catch (Exception e) {
             return "0|0";
         }
-        return "";
+        return convertirVelocidad( kmPorSeg);
     }
+
+
 
     // Solicitar al usuario ingresar una cantidad expresada en cc (centímetros cúbicos) y devolver su cantidad en litros
     public static int convertirCcALitros(double cc) {
         try {
-            // Lógica interna
+            double convertirCcALitros = cc/100;
+
         } catch (Exception e) {
             return -1;
         }
-        return 0;
+        return convertirCcALitros(cc);
     }
+
 
     // Solicitar al usuario ingresar una cantidad en dólares y convertirla a pesos según la TRM del día
     public static int convertirDolaresAPesos(double dolares, double trm) {
         try {
-            // Lógica interna
+             double convertirDolaresAPesos = (dolares * trm);
+            
         } catch (Exception e) {
             return -1;
         }
-        return 0;
+        return convertirDolaresAPesos(dolares, trm);
     }
+
+    
+    
 
     // Solicitar al usuario ingresar la temperatura en grados centígrados y convertirla en grados Fahrenheit (averiguar la fórmula) F = 32 + ( 9 * C / 5)
     public static int convertirCelsiusAFahrenheit(double celsius) {
         try {
-            // Lógica interna
+            double convertirCelsiusAFahrenheit = 32 + ( 9 * celsius / 5);
         } catch (Exception e) {
             return -1;
         }
-        return 0;
+        return convertirCelsiusAFahrenheit(celsius);
     }
 
-    // Solicitar al usuario ingresar Nro de Días nro de horas nro de minutos y nro segundos y convertir todo a segundos.
+    //Solicitar al usuario ingresar Nro de Días nro de horas nro de minutos y nro segundos y convertir todo a segundos.
     public static int convertirATotalSegundos(int dias, int horas, int minutos, int segundos) {
         try {
-            // Lógica interna
+            int diasAhoras= (dias * 24);
+            int horasAminutos = (diasAhoras*60);
+            int minutoAsegundos = (horasAminutos*60);
+                int horasAminuto = (horas * 60);
+                int minutosAsegundos = (horasAminuto*60);
+                    
+        int convertiraTotalSegundos = (minutoAsegundos + minutosAsegundos + segundos);
+
         } catch (Exception e) {
             return -1;
         }
-        return 0;
+        return convertirATotalSegundos(dias, horas, minutos, segundos);
     }
 
     // Un usuario tiene un sistema de báscula para pesar camiones, dado el peso de un camión debe sacar el peso neto de la carga en kilos y toneladas
     // retorne el valor en formato string (pesoEnKg + "|" + pesoEnToneladas)
     public static String calcularPesoNeto(double peso) {
         try {
-            // Lógica interna
+
+            double calcularPesoNetokg = (peso);
+            
+            double pesoNetoToneladas = (peso / 1000);
+            
+            return (calcularPesoNetokg)+ "|" + (pesoNetoToneladas);
         } catch (Exception e) {
-            return "0|0";
         }
-        return "";
+        return "0|0";
     }
 
     // Diseñe un algoritmo que calcule el tiempo necesario para alcanzar un destino dado por el usuario quien además ingresará la velocidad promedio en kilómetros/hora y la distancia en kilómetros
     public static int calcularTiempoViaje(double distancia, double velocidadKilometros, double velocidadHora) {
         try {
-            // Lógica interna
+            double calcularTiempoViaje = (distancia / velocidadKilometros); 
         } catch (Exception e) {
             return -1;
         }
-        return 0;
+        return calcularTiempoViaje(distancia, velocidadKilometros, velocidadHora);
     }
+
 
     // Un avión necesita cargar combustible para cubrir sus rutas programadas en el día. Cada 0.2 toneladas de combustible puede recorrer 60.8 Km en velocidad de crucero. En el despegue el avión consume 1.2 toneladas de combustible y en el aterrizaje consume 0.4 toneladas. El piloto desea un algoritmo que ingresando 4 rutas y el kilometraje de cada ruta obtenga la cantidad de combustible que debe tanquear en el avión.
     public static int calcularCombustible(double ruta1, double ruta2, double ruta3, double ruta4) {
-        try {
-            // Lógica interna
+        try{
+        
+        double consumoDespegue = 1.2; // toneladas
+            double consumoAterrizaje = 0.4; // toneladas
+            double consumoCruceroPorKm = 0.2 / 60.8; // toneladas por km
+            double Todaslasrutas = (ruta1 + ruta2 + ruta3 + ruta4);
+
+                double consumoCrucero = Todaslasrutas* consumoCruceroPorKm;
+                double calcularCombustible = consumoDespegue + consumoCrucero + consumoAterrizaje;
+            
         } catch (Exception e) {
             return -1;
         }
-        return 0;
+        return calcularCombustible(ruta1, ruta2, ruta3, ruta4);
     }
+
+
 
     // Diseñar un algoritmo que calcule el peso neto en la luna de un peso terrestre ingresado por teclado. La gravedad de la Luna es de alrededor del 17% más que la de la tierra
     public static int calcularPesoLunar(double pesoTierra) {
         try {
-            // Lógica interna
+           double calcularPesoLunar = pesoTierra + 0.17; 
         } catch (Exception e) {
             return -1;
         }
-        return 0;
+        return calcularPesoLunar(pesoTierra);
     }
 
     // Diseñar un algoritmo que calcule el saldo que debe haber en una taquilla de un banco. El cajero deberá ingresar la base el total de recaudos y el total de retiros
     public static int calcularSaldoTaquilla(double base, double ingresos, double retiros) {
         try {
-            // Lógica interna
+            double calcularSaldoTaquilla = ((base + ingresos)- retiros);
+            
         } catch (Exception e) {
             return -1;
         }
-        return 0;
+        return calcularSaldoTaquilla(base, ingresos, retiros);
     }
+
 
     // Diseñe un algoritmo para calcular la propina en un restaurante(10%) el impuesto al consumo (8%) y el valor final que deberá pagar ingresando el valor de la comida.
     // retorne el valor en formato string (propina + "|" + impuesto + "|" + total)
