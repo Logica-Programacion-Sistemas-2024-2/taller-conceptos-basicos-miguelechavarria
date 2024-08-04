@@ -152,14 +152,18 @@ public class App {
         return calcularSaldoTaquilla(base, ingresos, retiros);
     }
 
-
-    // Diseñe un algoritmo para calcular la propina en un restaurante(10%) el impuesto al consumo (8%) y el valor final que deberá pagar ingresando el valor de la comida.
+ // Diseñe un algoritmo para calcular la propina en un restaurante(10%) el impuesto al consumo (8%) y el valor final que deberá pagar ingresando el valor de la comida.
     // retorne el valor en formato string (propina + "|" + impuesto + "|" + total)
     public static String calcularCuentaRestaurante(double costoComida) {
         try {
-            // Lógica interna
+            double propina = 0.10;
+            double impuestoConsumo = 0.8;
+            double valorComida = 0;
+
+            double calcularCuentaRestaurante = (valorComida + propina)+(impuestoConsumo);
+        return propina + "|" + impuestoConsumo + "|" + calcularCuentaRestaurante;
         } catch (Exception e) {
-            return -1 + "|" + -1 + "|" + -1;
+            
         }
         return "";
     }
@@ -167,78 +171,115 @@ public class App {
     // Diseñar un algoritmo que obtenga los puntos finales de un equipo de fútbol (puntuación según lineamientos de Fifa) a partir de los datos ingresados por teclado: Número de partidos ganados número de partidos perdidos número de partidos empatados.
     public static int calcularPuntosFutbol(int ganados, int perdidos, int empatados) {
         try {
-            // Lógica interna
+            int Perdidos = -3;
+            int Ganados = +3;
+            int Empatados = +1;
+
+            int calcularPuntosFutbol = (Perdidos + Ganados + Empatados);
         } catch (Exception e) {
             return -1;
         }
-        return 0;
+        return calcularPuntosFutbol(ganados, perdidos, empatados);
     }
 
     // Elaborar un algoritmo que dadas todas las 5 notas y los 5 porcentajes para una materia calcule la nota final.
     public static int calcularNotaFinal(double nota1, double nota2, double nota3, double nota4, double nota5,
                                         double porcentaje1, double porcentaje2, double porcentaje3, double porcentaje4, double porcentaje5) {
         try {
-            // Lógica interna
+            double nota_1 = nota1 * porcentaje1;
+            double nota_2 = nota2 * porcentaje2;
+            double nota_3 = nota3 * porcentaje3;
+            double nota_4 = nota4 * porcentaje4;
+            double nota_5 = nota5 * porcentaje5;
+
+        double calcularNotaFinal = ((nota_1 + nota_2 + nota_3 + nota_4 + nota_5)/5);
         } catch (Exception e) {
             return -1;
         }
-        return 0;
+        return calcularNotaFinal(nota1, nota2, nota3, nota4, nota5, porcentaje1, porcentaje2, porcentaje3, porcentaje4, porcentaje5);
     }
 
-    // Elaborar un algoritmo que dados los 5 porcentajes de una materia y las 4 primeras notas calcule cuánto tiene que sacar para ganar si el puntaje mínimo es 3.
+     // Elaborar un algoritmo que dados los 5 porcentajes de una materia y las 4 primeras notas calcule cuánto tiene que sacar para ganar si el puntaje mínimo es 3.
     public static int calcularNotaNecesaria(double porcentaje1, double porcentaje2, double porcentaje3, double porcentaje4, double porcentaje5, double nota1, double nota2, double nota3, double nota4) {
         try {
-            // Lógica interna
+            double nota_1 = nota1 * porcentaje1;
+            double nota_2 = nota2 * porcentaje2;
+            double nota_3 = nota3 * porcentaje3;
+            double nota_4 = nota4 * porcentaje4;
+            
+            double total = (nota_1 + nota_2 + nota_3 + nota_4)/4;
+
+            double calcularNotaNecesaria = ((3 - total)/porcentaje5);
+
         } catch (Exception e) {
             return -1;
         }
-        return 0;
+        return calcularNotaNecesaria(porcentaje1, porcentaje2, porcentaje3, porcentaje4, porcentaje5, nota1, nota2, nota3, nota4);
     }
 
-    // Se requiere un algoritmo para calcular el salario a pagar a un trabajador con los siguientes datos ingresados por teclado: cantidad de horas normales laboradas cantidad de horas extras diurnas laboradas cantidad de horas extras nocturnas laboradas valor de la hora normal. El valor de las horas extras diurnas tienen un recargo adicional del 15% sobre la hora normal. El valor de las horas extras nocturnas tienen un recargo adicional del 35% sobre la hora normal.
+     // Se requiere un algoritmo para calcular el salario a pagar a un trabajador con los siguientes datos ingresados por teclado: cantidad de horas normales laboradas cantidad de horas extras diurnas laboradas cantidad de horas extras nocturnas laboradas valor de la hora normal. El valor de las horas extras diurnas tienen un recargo adicional del 15% sobre la hora normal. El valor de las horas extras nocturnas tienen un recargo adicional del 35% sobre la hora normal.
     public static int calcularSalario(int horasNormales, int horasExtrasDiurnas, int horasExtrasNocturnas, double valorHoraNormal) {
         try {
-            // Lógica interna
+            int horas_Normales = horasNormales;
+            double hora_normal = valorHoraNormal;
+            double horasExtrasdiurnas = (valorHoraNormal + 0.15);
+            double horasExtrasnocturnas = (valorHoraNormal + 0.35);
+
+            double calcularSalario = (horas_Normales + horasExtrasdiurnas + horasExtrasnocturnas); 
+
         } catch (Exception e) {
             return -1;
         }
-        return 0;
+        return calcularSalario(horasNormales, horasExtrasDiurnas, horasExtrasNocturnas, valorHoraNormal);
     }
 
-    // Diseñe un algoritmo que calcule el área de un triángulo rectángulo.
+     // Diseñe un algoritmo que calcule el área de un triángulo rectángulo.
     public static int calcularAreaTriangulo(double base, double altura) {
         try {
-            // Lógica interna
+            double Base = base;
+            double Altura = altura;
+
+            double calcularAreaTriangulo = ((base * altura)/2);
+
         } catch (Exception e) {
             return -1;
         }
-        return 0;
+        return calcularAreaTriangulo(base, altura);
     }
 
-    // Diseñe un algoritmo que calcule el perímetro de un cuadrado.
+     // Diseñe un algoritmo que calcule el perímetro de un cuadrado.
     public static int calcularPerimetroCuadrado(double lado) {
         try {
-            // Lógica interna
+            double Lado = lado;
+
+            double calcularPerimetroCuadrado = lado * 4;
+
         } catch (Exception e) {
             return -1;
         }
-        return 0;
+        return calcularPerimetroCuadrado(lado);
     }
 
-    // Diseñe un algoritmo que calcule el volumen de un cilindro.
+     // Diseñe un algoritmo que calcule el volumen de un cilindro.
     public static int calcularVolumenCilindro(double radio, double altura) {
         try {
-            // Lógica interna
+            double Radio= radio;
+            double Altura = altura;
+
+            double calcularVolumenCilindro = 3.1416 * Radio*(Radio) * Altura;
         } catch (Exception e) {
             return -1;
         }
-        return 0;
+        return calcularVolumenCilindro(radio, altura);
     }
 
-    // Diseñe un algoritmo que calcule el área del círculo. El radio se pide por teclado.
+     // Diseñe un algoritmo que calcule el área del círculo. El radio se pide por teclado.
     public static int calcularAreaCirculo(double radio) {
         try {
-            // Lógica interna
+            
+            double Radio = radio;
+
+            double calcularAreaCirculo = 3.1416 * (Radio*Radio);
         } catch (Exception e) {
             return -1;
         }
